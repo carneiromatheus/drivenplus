@@ -47,8 +47,8 @@ Local Storage **deve** ser usado para armazenar as credenciais do usuário, envi
 - [ ]  Ao clicar no icone para voltar, o usuário deve ser redirecionado para a rota `/subscriptions` (rota de Planos)
 
 #### Tela Planos (rota `/subscriptions`)
-- [ ]  Carregar os planos disponíveis, mandando request pra API conforme documentação e exibindo abaixo conforme layout
-- [ ]  Ao clicar em um dos planos, o usuário deve ser redirecionado para a rota `/subscriptions/ID_DO_PLANO`) (rota de Plano) com o Id do plano selecionado
+- [x]  Carregar os planos disponíveis, mandando request pra API conforme documentação e exibindo abaixo conforme layout
+- [x]  Ao clicar em um dos planos, o usuário deve ser redirecionado para a rota `/subscriptions/ID_DO_PLANO`) (rota de Plano) com o Id do plano selecionado
 
 #### Tela Home (rota `/home`)
 - [ ]  Carregar as informações do plano do usuário e exibindo abaixo conforme layout

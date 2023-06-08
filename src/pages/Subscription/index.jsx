@@ -30,7 +30,7 @@ export default function SubscriptionPage() {
     return (
         <ContainerSC>
             <TitleSC>Escolha seu Plano</TitleSC>
-            {plans.map(plan => <PlanCards key={plan.id} plan={plan} /> )
+            {plans.map(plan => <PlanCards key={plan.id} id={plan.id} plan={plan} /> )
             }
         </ContainerSC>
     )
