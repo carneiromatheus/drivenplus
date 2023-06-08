@@ -1,20 +1,5 @@
 import styled from "styled-components";
 
-const TitleSC = styled.h1`
-    width: 100vw;
-    height: 91px;
-    
-    font-weight: 700;
-    font-size: 32px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: fixed;
-    top: 29px;
-`
-
 const CardSC = styled.div`
     width: 290px;
     height: 180px;
@@ -44,4 +29,4 @@ const PrecoSC = styled.p`
     font-weight: 700;
 `
 
-export { CardSC, BannerPlanSC, PrecoSC, TitleSC }
+export { CardSC, BannerPlanSC, PrecoSC }

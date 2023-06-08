@@ -8,4 +8,19 @@ const ContainerSC = styled.div`
     align-items: center;
 `
 
-export { ContainerSC };
+const TitleSC = styled.h1`
+    width: 100vw;
+    height: 91px;
+    
+    font-weight: 700;
+    font-size: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 29px;
+`
+
+export { ContainerSC, TitleSC };

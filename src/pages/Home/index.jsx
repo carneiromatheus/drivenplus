@@ -1,4 +1,3 @@
-import bannerPlan from '../../assets/img/logoGreen.png'
 import userIcon from '../../assets/img/userIcon.png'
 
 import { BannerSC, ContainerSC, TitleSC, UserSC } from "./style";

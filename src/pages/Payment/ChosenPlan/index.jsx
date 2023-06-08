@@ -1,5 +1,4 @@
 import { BannerPlanSC, DescriptionPlanSC, DetailSC, IconSC, ListDetailsSC, SummarySC, TitleSC } from "./style";
-import white from '../../../assets/img/logoWhite.png';
 import clipboard from '../../../assets/img/clipboardIcon.png'
 import money from '../../../assets/img/moneyIcon.png'
 
@@ -7,7 +6,7 @@ export default function Plan() {
     return (
         <>
             <BannerPlanSC >
-                <img src={white} alt="banner" />
+                <img src={"white"} alt="banner" />
                 <TitleSC>Driven Plus</TitleSC>
             </BannerPlanSC>
 
