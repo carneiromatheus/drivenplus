@@ -2,7 +2,8 @@
 Projeto de estudo entregue como requisito parcial para avaliação do modulo 2: Single Page Applications (SPA) do bootcamp de desenvolvimento full-stack da Driven Education consiste em construir uma aplicação front-end completa que possibilita a assinatura de um serviço online, o Driven Plus!
 
 ---
-[TOCM]
+### Deploy: https://carneiromatheus-drivenplus.vercel.app/
+---
 
 ### ✅ Requisitos
 
@@ -31,9 +32,9 @@ Local Storage **deve** ser usado para armazenar as credenciais do usuário, envi
 - [x]  Ao clicar no link para se cadastrar, o usuário deve ser redirecionado para a rota `/sign-up`
 
 #### Tela Cadastro (rota `/sign-up`)
-- [ ]  Os dados devem ser enviados para a API conforme documentação
-- [ ]  Em caso de sucesso, o usuário deve ser redirecionado para a rota `/` (rota de Login)
-- [ ]  Em caso de falha, deve ser exibido um alert informando para o usuário
+- [x]  Os dados devem ser enviados para a API conforme documentação
+- [x]  Em caso de sucesso, o usuário deve ser redirecionado para a rota `/` (rota de Login)
+- [x]  Em caso de falha, deve ser exibido um alert informando para o usuário
 - [x]  Ao clicar no link para logar, o usuário deve ser redirecionado para a rota `/` (rota de Login)
 
 #### Tela Plano (rota `/subscriptions/ID_DO_PLANO`)
