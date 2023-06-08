@@ -1,5 +1,5 @@
 # Driven Plus
-Projeto de estudo entregue como requisito parcial para avaliação do modulo 2: Single Page Applications (SPA) do bootcamp de desenvolvimento full-stack da Driven Education consiste em construir uma aplicação front-end completa que possibilita a assinatura de um serviço online, o Driven Plus!
+Projeto de estudo entregue como requisito parcial para avaliação do modulo 2: Single Page Applications (SPA) do bootcamp de desenvolvimento full-stack da Driven Education. Uma aplicação front-end completa que possibilita a assinatura de um serviço online, o Driven Plus!
 
 ---
 ### Deploy: https://carneiromatheus-drivenplus.vercel.app/
@@ -22,13 +22,13 @@ Projeto de estudo entregue como requisito parcial para avaliação do modulo 2: 
 #### Tela Login (rota `/`)
 Local Storage **deve** ser usado para armazenar as credenciais do usuário, enviadas pelo servidor. **Session Storage não deve ser utilizado**.
 
-- [ ]  Deve ser enviado o email e senha para a API conforme documentação
-- [ ]  Em caso de sucesso, duas coisas poderão acontecer
-    - [ ]  Se o usuário ainda não possuir um plano ele deve ser redirecionado para a rota `/subscriptions`
-    - [ ]  Se o usuário possuir um plano ele deve ser redirecionado para a rota `/home`
-- [ ]  Em caso de falha, deve ser exibido um `alert` informando para o usuário
-- [ ]  Após o login, para persistir os dados, salve o objeto do usuário na máquina utilizando **Local Storage**
-- [ ]  Ao abrir o app, verifique se há um usuário armazenado no Local Storage. Se sim, popule o UserContext com esse dado e redirecione o usuário direto para a tela inicial do app, evitando que ele faça login novamente
+- [x]  Deve ser enviado o email e senha para a API conforme documentação
+- [x]  Em caso de sucesso, duas coisas poderão acontecer
+    - [x]  Se o usuário ainda não possuir um plano ele deve ser redirecionado para a rota `/subscriptions`
+    - [x]  Se o usuário possuir um plano ele deve ser redirecionado para a rota `/home`
+- [x]  Em caso de falha, deve ser exibido um `alert` informando para o usuário
+- [x]  Após o login, para persistir os dados, salve o objeto do usuário na máquina utilizando **Local Storage**
+- [x]  Ao abrir o app, verifique se há um usuário armazenado no Local Storage. Se sim, popule o UserContext com esse dado e redirecione o usuário direto para a tela inicial do app, evitando que ele faça login novamente
 - [x]  Ao clicar no link para se cadastrar, o usuário deve ser redirecionado para a rota `/sign-up`
 
 #### Tela Cadastro (rota `/sign-up`)
