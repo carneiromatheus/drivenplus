@@ -4,13 +4,10 @@ import Form from "./CardForm";
 import Confirm from "./paymentConfirm";
 import { ContainerSC, NavBarSC } from "./style";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function PaymentPage() {
     const [displayConfirm, setDisplayConfirm] = useState(false)
-
-    const { idPlan } = useParams()
-    console.log(idPlan)
 
     return (
         <ContainerSC>

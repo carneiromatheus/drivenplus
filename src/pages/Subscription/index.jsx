@@ -10,28 +10,27 @@ export default function SubscriptionPage() {
     const plansOnLocalStorage = localStorage.getItem("plans")
     const [plans, setPlans] = useState(JSON.parse(plansOnLocalStorage))
 
-    function setAndPersistPlans(plans) {
+    function setAndPersistListPlans(plans) {
         setPlans(plans)
         localStorage.setItem("plans", JSON.stringify(plans))
     }
 
-    function loadListPlan(token) {
+    function loadListPlans(token) {
         const promise = api.getListPlans(token)
 
         promise.then(response => {
-            setAndPersistPlans(response.data)
+            setAndPersistListPlans(response.data)
         })
     }
 
     useEffect(() => {
-        loadListPlan(token)
+        loadListPlans(token)
     }, [])
 
     return (
         <ContainerSC>
             <TitleSC>Escolha seu Plano</TitleSC>
-            {plans.map(plan => <PlanCards key={plan.id} id={plan.id} plan={plan} /> )
-            }
+            {plans.map(plan => <PlanCards key={plan.id} id={plan.id} plan={plan} /> )}
         </ContainerSC>
     )
 }
