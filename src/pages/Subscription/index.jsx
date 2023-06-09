@@ -7,19 +7,14 @@ import AuthContext from '../../contexts/AuthContext'
 
 export default function SubscriptionPage() {
     const { token } = useContext(AuthContext)
-    const plansOnLocalStorage = localStorage.getItem("plans")
-    const [plans, setPlans] = useState(JSON.parse(plansOnLocalStorage))
+    const [plans, setPlans] = useState([])
 
-    function setAndPersistListPlans(plans) {
-        setPlans(plans)
-        localStorage.setItem("plans", JSON.stringify(plans))
-    }
 
     function loadListPlans(token) {
         const promise = api.getListPlans(token)
 
         promise.then(response => {
-            setAndPersistListPlans(response.data)
+            setPlans(response.data)
         })
     }
 
