@@ -6,7 +6,7 @@ export default function HomePage() {
     return (
         <ContainerSC>
             <nav>
-                <BannerSC src={bannerPlan} alt="banner" />
+                <BannerSC src={"bannerPlan"} alt="banner" />
                 <UserSC src={userIcon} alt="user" />
             </nav>
 

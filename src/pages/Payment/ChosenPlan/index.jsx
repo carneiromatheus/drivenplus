@@ -2,34 +2,39 @@ import { BannerPlanSC, DescriptionPlanSC, DetailSC, IconSC, ListDetailsSC, Summa
 import clipboard from '../../../assets/img/clipboardIcon.png'
 import money from '../../../assets/img/moneyIcon.png'
 
-export default function Plan() {
+export default function Plan({ plan }) {
+    const loading = plan.perks
+
+
+
     return (
-        <>
-            <BannerPlanSC >
-                <img src={"white"} alt="banner" />
-                <TitleSC>Driven Plus</TitleSC>
-            </BannerPlanSC>
 
-            <DescriptionPlanSC>
-                <section>
-                    <header>
-                        <IconSC src={clipboard} alt="icon" />
-                        <SummarySC>Benefícios:</SummarySC>
-                    </header>
-                    <ListDetailsSC>
-                        <DetailSC>Brinde exclusivos</DetailSC>
-                        <DetailSC>Materiais bônus de web</DetailSC>
-                    </ListDetailsSC>
-                </section>
+        loading === undefined ? <BannerPlanSC>Carregando...</BannerPlanSC>:
+            <>
+                <BannerPlanSC >
+                    <img src={plan.image} alt="banner" />
+                    <TitleSC>{plan.name}</TitleSC>
+                </BannerPlanSC>
 
-                <section>
-                    <header>
-                        <IconSC src={money} alt="icon" />
-                        <SummarySC>Preço:</SummarySC>
-                    </header>
-                    <p>R$ 39,99 cobrados mensalmente</p>
-                </section>
-            </DescriptionPlanSC>
-        </>
+                <DescriptionPlanSC>
+                    <section>
+                        <header>
+                            <IconSC src={clipboard} alt="icon" />
+                            <SummarySC>Benefícios:</SummarySC>
+                        </header>
+                        <ListDetailsSC>
+                            {plan.perks.map((i) => <DetailSC key={i.title}>{i.title}</DetailSC>)}
+                        </ListDetailsSC>
+                    </section>
+
+                    <section>
+                        <header>
+                            <IconSC src={money} alt="icon" />
+                            <SummarySC>Preço:</SummarySC>
+                        </header>
+                        <p>R$ {plan.price} cobrados mensalmente</p>
+                    </section>
+                </DescriptionPlanSC>
+            </>
     )
 }

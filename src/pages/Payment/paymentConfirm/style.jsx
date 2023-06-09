@@ -29,14 +29,13 @@ const QuestionCard =styled.div`
     width: 248px;
     height: 210px;
 
-    padding-top: 33px;
-    padding-left: 22px;
-    padding-right: 22px;
-    padding-bottom: 11px;
-
     display: flex;
     flex-direction: column;
     gap: 47px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background: #FFFFFF;
     border-radius: 12px;
@@ -58,6 +57,8 @@ const QuestionCard =styled.div`
         width: 95px;
         height: 52px;
 
+        margin-top: 0;
+        
         border-radius: 8px;
 
         &.gray {

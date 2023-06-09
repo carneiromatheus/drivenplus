@@ -6,7 +6,7 @@ import AuthContext from '../../contexts/AuthContext'
 
 
 export default function SubscriptionPage() {
-    const { token } = useContext(AuthContext)
+    const { userDate } = useContext(AuthContext)
     const [plans, setPlans] = useState([])
 
 
@@ -19,7 +19,7 @@ export default function SubscriptionPage() {
     }
 
     useEffect(() => {
-        loadListPlans(token)
+        loadListPlans(userDate.token)
     }, [])
 
     return (

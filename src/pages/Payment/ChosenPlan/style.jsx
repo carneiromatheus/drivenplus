@@ -1,12 +1,11 @@
 import styled from "styled-components"
 
 const BannerPlanSC = styled.div`
-    width: 164px;
     height: 145px;
-
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     
     img {
         width: 102px;

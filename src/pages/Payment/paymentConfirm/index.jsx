@@ -1,16 +1,16 @@
 import close from '../../../assets/img/closeButton.png'
 import { BlurSC, NavBarSC, QuestionCard } from "./style";
 
-export default function Confirm() {
+export default function Confirm({ plan, setDisplayConfirm }) {
     return (
         <BlurSC>
             <NavBarSC>
-                <img src={close} alt="close" />
+                <img onClick={() => setDisplayConfirm(false)} src={close} alt="close" />
             </NavBarSC>
             <QuestionCard>
-                <p>Tem certeza que deseja assinar o plano {<br />}Driven Plus (R$ 39,99)?</p>
+                <p>Tem certeza que deseja assinar o plano {<br />}{plan.name} (R$ {plan.price})?</p>
                 <section>
-                    <button className='gray'>NÃO</button>
+                    <button className='gray' onClick={() => setDisplayConfirm(false)}>NÃO</button>
                     <button>SIM</button>
                 </section>
             </QuestionCard>

@@ -18,6 +18,13 @@ function signUp(body) {
   return promise;
 }
 
+function subscription(body, token) {
+  const config = createConfig(token)
+  const promise = axios.post(`${BASE_URL}/subscriptions`, body, config);
+
+  return promise;
+}
+
 function getListPlans(token) {
   const config = createConfig(token)
 
@@ -26,6 +33,14 @@ function getListPlans(token) {
   return promise
 }
 
-const api = { getListPlans, login, signUp }
+function getPlan(token, idPlan) {
+  const config = createConfig(token, idPlan)
+
+  const promise = axios.get(`${BASE_URL}/subscriptions/memberships/${idPlan}`, config)
+
+  return promise
+}
+
+const api = { getListPlans, getPlan, login, signUp, subscription }
 
 export default api;

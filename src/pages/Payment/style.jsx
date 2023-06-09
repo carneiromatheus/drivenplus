@@ -6,6 +6,10 @@ const ContainerSC = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    button {
+        margin-top: 20px;
+    }
 `
 
 const NavBarSC = styled.nav`
@@ -17,4 +21,15 @@ const NavBarSC = styled.nav`
     left: 0;
 `
 
-export { ContainerSC, NavBarSC }
+const SmallInputSC = styled.section`
+    display: flex;
+    gap: 9px;
+
+    input {
+        width: 145px;
+        height: 52px;
+        padding: 10px;
+    }
+`
+
+export { ContainerSC, NavBarSC, SmallInputSC }

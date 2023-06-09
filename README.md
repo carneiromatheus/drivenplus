@@ -38,13 +38,13 @@ Local Storage **deve** ser usado para armazenar as credenciais do usuário, envi
 - [x]  Ao clicar no link para logar, o usuário deve ser redirecionado para a rota `/` (rota de Login)
 
 #### Tela Plano (rota `/subscriptions/ID_DO_PLANO`)
-- [ ]  Carregar os dados do plano selecionado, mandando request pra API conforme documentação e exibindo abaixo conforme layout
-- [ ]  Antes do envio dos dados, o usuário deverá confirmar a assinatura por meio de um Modal, conforme layout
-    - [ ]  Ao clicar em “Não” ou no icone para fechar, o modal deverá ser fechado, sem seguir com a requisição
-    - [ ]  Ao clicar em sim os dados do cartão devem ser enviados para a API conforme documentação
-        - [ ]  Em caso de sucesso, o usuário deve ser redirecionado para a rota `/home` (rota de Home)
-        - [ ]  Em caso de falha, deve ser exibido um alert informando para o usuário
-- [ ]  Ao clicar no icone para voltar, o usuário deve ser redirecionado para a rota `/subscriptions` (rota de Planos)
+- [x]  Carregar os dados do plano selecionado, mandando request pra API conforme documentação e exibindo abaixo conforme layout
+- [x]  Antes do envio dos dados, o usuário deverá confirmar a assinatura por meio de um Modal, conforme layout
+    - [x]  Ao clicar em “Não” ou no icone para fechar, o modal deverá ser fechado, sem seguir com a requisição
+    - [x]  Ao clicar em sim os dados do cartão devem ser enviados para a API conforme documentação
+        - [x]  Em caso de sucesso, o usuário deve ser redirecionado para a rota `/home` (rota de Home)
+        - [x]  Em caso de falha, deve ser exibido um alert informando para o usuário
+- [x]  Ao clicar no icone para voltar, o usuário deve ser redirecionado para a rota `/subscriptions` (rota de Planos)
 
 #### Tela Planos (rota `/subscriptions`)
 - [x]  Carregar os planos disponíveis, mandando request pra API conforme documentação e exibindo abaixo conforme layout

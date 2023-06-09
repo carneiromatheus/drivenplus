@@ -8,16 +8,16 @@ import PaymentPage from "./pages/Payment";
 import HomePage from "./pages/Home";
 
 export default function App() {
-  const tokenOnLocalStorage = localStorage.getItem("token")
-  const [token, setToken] = useState(tokenOnLocalStorage)
+  const userOnLocalStorage = localStorage.getItem("userDate")
+  const [userDate, setToken] = useState(JSON.parse(userOnLocalStorage))
 
-  function setAndPersistToken(token) {
-    setToken(token)
-    localStorage.setItem("token", token)
+  function setAndPersistUser (user) {
+    setToken(user)
+    localStorage.setItem("userDate", JSON.stringify(user))
   }
 
   return (
-    <AuthContext.Provider value={{ token, setAndPersistToken }}>
+    <AuthContext.Provider value={{ userDate, setAndPersistUser }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />

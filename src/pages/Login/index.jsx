@@ -6,11 +6,10 @@ import AuthContext from "../../contexts/AuthContext";
 import api from "../../services/api";
 
 export default function LoginPage() {
-    const { setAndPersistToken } = useContext(AuthContext)
+    const { setAndPersistUser } = useContext(AuthContext)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [membership, setMembership] = useState('')
 
 
     const navigate = useNavigate()
@@ -22,16 +21,8 @@ export default function LoginPage() {
         const promise = api.login({ ...user })
 
         promise.then(response => {
-            setAndPersistToken(response.data.token)
-            setMembership(response.data.membership)
-            
-            console.log(response.data)
-            console.log(`e-mail = ${email}`)
-            console.log(`senha = ${password}`)
-            console.log(`plano = ${membership}`)
-            console.log(`token = ${response.data.token}`)
-
-            { membership === '' ? navigate('/subscriptions') : navigate('/home') }
+            setAndPersistUser(response.data)
+            { response.data.membership === null ? navigate('/subscriptions') : navigate('/home') }
         })
 
         promise.catch(err => alert(err.response.data.message))
