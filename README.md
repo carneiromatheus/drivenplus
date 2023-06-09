@@ -12,7 +12,7 @@ Projeto de estudo entregue como requisito parcial para avaliação do modulo 2: 
 - [x]  Para controlar os dados dinâmicos da aplicação, utilize as ferramentas de gerenciamento de estado do React (não utilize variáveis globais)
 - [x]  Para estados globais (como usuário logado) utilize **ContextAPI**.
 - [x]  Versionamento usando Git é obrigatório, crie um **repositório público** no seu perfil do GitHub
-- [ ]  Faça commits a cada funcionalidade implementada
+- [x]  Faça commits a cada funcionalidade implementada
 
 #### Layout
 - [x]  Aplicar layout, seguindo figma fornecido   
