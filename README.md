@@ -8,9 +8,9 @@ Projeto de estudo entregue como requisito parcial para avaliação do modulo 2: 
 ### ✅ Requisitos
 
 #### Geral
-- [ ]  Manipule o HTML usando somente React (você não deve manipular o DOM diretamente com `querySelector`, `innerHTML`, `classList`)
-- [ ]  Para controlar os dados dinâmicos da aplicação, utilize as ferramentas de gerenciamento de estado do React (não utilize variáveis globais)
-- [ ]  Para estados globais (como usuário logado) utilize **ContextAPI**.
+- [x]  Manipule o HTML usando somente React (você não deve manipular o DOM diretamente com `querySelector`, `innerHTML`, `classList`)
+- [x]  Para controlar os dados dinâmicos da aplicação, utilize as ferramentas de gerenciamento de estado do React (não utilize variáveis globais)
+- [x]  Para estados globais (como usuário logado) utilize **ContextAPI**.
 - [x]  Versionamento usando Git é obrigatório, crie um **repositório público** no seu perfil do GitHub
 - [ ]  Faça commits a cada funcionalidade implementada
 
@@ -51,11 +51,11 @@ Local Storage **deve** ser usado para armazenar as credenciais do usuário, envi
 - [x]  Ao clicar em um dos planos, o usuário deve ser redirecionado para a rota `/subscriptions/ID_DO_PLANO`) (rota de Plano) com o Id do plano selecionado
 
 #### Tela Home (rota `/home`)
-- [ ]  Carregar as informações do plano do usuário e exibindo abaixo conforme layout
-    - [ ]  **OBS**: Utilize ContextAPI para compartilhar o estado do usuário logado globalmente entre os componentes.
-    - [ ]  **OBS:** Os botões para os benefícios são links (veja o exemplo de resposta da API)
+- [x]  Carregar as informações do plano do usuário e exibindo abaixo conforme layout
+    - [x]  **OBS**: Utilize ContextAPI para compartilhar o estado do usuário logado globalmente entre os componentes.
+    - [x]  **OBS:** Os botões para os benefícios são links (veja o exemplo de resposta da API)
 - [ ]  Ao clicar no botão “Cancelar plano”, os dados deverão ser enviados para a API conforme documentação e em caso de sucesso, o usuário deve ser redirecionado para a rota `/subscriptions`
-- [ ]  Ao clicar no botão “Mudar plano”, o usuário deve ser redirecionado para a rota `/subscriptions`
+- [x]  Ao clicar no botão “Mudar plano”, o usuário deve ser redirecionado para a rota `/subscriptions`
  
  ### ☑️ Bônus
 

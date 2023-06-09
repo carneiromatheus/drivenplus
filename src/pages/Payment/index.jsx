@@ -8,7 +8,7 @@ import Plan from "./ChosenPlan";
 import Confirm from "./paymentConfirm";
 
 export default function PaymentPage() {
-    const { userDate } = useContext(AuthContext)
+    const { userDate, setAndPersistPlan} = useContext(AuthContext)
     const { idPlan } = useParams()
     const [plan, setPlan] = useState([])
     const [displayConfirm, setDisplayConfirm] = useState(false)
@@ -26,7 +26,8 @@ export default function PaymentPage() {
         const newSubscription = { membershipId: idPlan, cardName, cardNumber, securityNumber, expirationDate }
         const promise = api.subscription({ ...newSubscription }, userDate.token)
 
-        promise.then(() => {
+        promise.then((response) => {
+            setAndPersistPlan(response.data)
             navigate('/home')
         })
         promise.catch(err => alert(err.response.data.message))

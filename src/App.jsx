@@ -11,13 +11,21 @@ export default function App() {
   const userOnLocalStorage = localStorage.getItem("userDate")
   const [userDate, setToken] = useState(JSON.parse(userOnLocalStorage))
 
-  function setAndPersistUser (user) {
+  const planOnLocalStorage = localStorage.getItem("planDate")
+  const [planDate, setPlan] = useState(JSON.parse(planOnLocalStorage))
+
+  function setAndPersistUser(user) {
     setToken(user)
     localStorage.setItem("userDate", JSON.stringify(user))
   }
 
+  function setAndPersistPlan(plan) {
+    setPlan(plan)
+    localStorage.setItem("planDate", JSON.stringify(plan))
+  }
+
   return (
-    <AuthContext.Provider value={{ userDate, setAndPersistUser }}>
+    <AuthContext.Provider value={{ userDate, planDate, setAndPersistUser, setAndPersistPlan }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
