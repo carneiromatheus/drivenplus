@@ -54,7 +54,7 @@ Local Storage **deve** ser usado para armazenar as credenciais do usuário, envi
 - [x]  Carregar as informações do plano do usuário e exibindo abaixo conforme layout
     - [x]  **OBS**: Utilize ContextAPI para compartilhar o estado do usuário logado globalmente entre os componentes.
     - [x]  **OBS:** Os botões para os benefícios são links (veja o exemplo de resposta da API)
-- [ ]  Ao clicar no botão “Cancelar plano”, os dados deverão ser enviados para a API conforme documentação e em caso de sucesso, o usuário deve ser redirecionado para a rota `/subscriptions`
+- [X]  Ao clicar no botão “Cancelar plano”, os dados deverão ser enviados para a API conforme documentação e em caso de sucesso, o usuário deve ser redirecionado para a rota `/subscriptions`
 - [x]  Ao clicar no botão “Mudar plano”, o usuário deve ser redirecionado para a rota `/subscriptions`
  
  ### ☑️ Bônus
