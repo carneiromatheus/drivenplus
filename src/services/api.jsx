@@ -34,7 +34,7 @@ function getListPlans(token) {
 }
 
 function getPlan(token, idPlan) {
-  const config = createConfig(token, idPlan)
+  const config = createConfig(token)
 
   const promise = axios.get(`${BASE_URL}/subscriptions/memberships/${idPlan}`, config)
 

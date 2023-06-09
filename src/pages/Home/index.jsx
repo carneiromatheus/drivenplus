@@ -1,31 +1,54 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import userIcon from '../../assets/img/userIcon.png'
 
 import { BannerSC, ContainerSC, TitleSC, UserSC } from "./style";
 import AuthContext from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
+import api from '../../services/api';
 
 export default function HomePage() {
-    const { userDate, planDate } = useContext(AuthContext)
-    console.log(planDate)
+    const { userDate } = useContext(AuthContext)
+    const [plan, setPlan] = useState(undefined)
+
+    // console.log(userDate)
+
+    function loadPlan(token, id) {
+        const promise = api.getPlan(token, id)
+
+        promise.then(response => {
+            setPlan(response.data)
+            console.log(response.data)
+        })
+
+        promise.catch(err => console.log(err.response.data.message))
+    }
+
+    useEffect(() => {
+        // console.log(userDate.membership.id)
+        loadPlan(userDate.token, userDate.membership.id)
+    }, [])
 
     return (
         <ContainerSC>
-            <nav>
-                <BannerSC src={planDate.membership.image} alt="banner" />
-                <UserSC src={userIcon} alt="user" />
-            </nav>
+            {plan === undefined ? <main>Carregando...</main> :
+            <>
+                <nav>
+                    <BannerSC src={plan.image} alt="banner" />
+                    <UserSC src={userIcon} alt="user" />
+                </nav>
 
-            <TitleSC>Olá, {userDate.name}</TitleSC>
+                <TitleSC>Olá, {userDate.name}</TitleSC>
 
-            <main>
-                {planDate.membership.perks.map((i) => <Link to={i.link} target="_blank"> <button key={i.title}>{i.title}</button> </Link>)}
-            </main>
+                <main>
+                    {plan.perks.map((i) => <Link to={i.link} target="_blank" key={i.id}> <button>{i.title}</button> </Link>)}
+                </main>
+            </>
+                }
 
-            <footer>
-                <Link to="/subscriptions"><button>Mudar plano</button></Link>
-                <button className="red">Cancelar plano</button>
-            </footer>
+                <footer>
+                    <Link to="/subscriptions"><button>Mudar plano</button></Link>
+                    <button className="red">Cancelar plano</button>
+                </footer>
         </ContainerSC>
     )
 }

@@ -9,23 +9,15 @@ import HomePage from "./pages/Home";
 
 export default function App() {
   const userOnLocalStorage = localStorage.getItem("userDate")
-  const [userDate, setToken] = useState(JSON.parse(userOnLocalStorage))
-
-  const planOnLocalStorage = localStorage.getItem("planDate")
-  const [planDate, setPlan] = useState(JSON.parse(planOnLocalStorage))
+  const [userDate, setUser] = useState(JSON.parse(userOnLocalStorage))
 
   function setAndPersistUser(user) {
-    setToken(user)
+    setUser(user)
     localStorage.setItem("userDate", JSON.stringify(user))
   }
 
-  function setAndPersistPlan(plan) {
-    setPlan(plan)
-    localStorage.setItem("planDate", JSON.stringify(plan))
-  }
-
   return (
-    <AuthContext.Provider value={{ userDate, planDate, setAndPersistUser, setAndPersistPlan }}>
+    <AuthContext.Provider value={{ userDate, setAndPersistUser }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
