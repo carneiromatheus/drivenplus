@@ -41,6 +41,13 @@ function getPlan(token, idPlan) {
   return promise
 }
 
-const api = { getListPlans, getPlan, login, signUp, subscription }
+function deletePlan(token) {
+  const config = createConfig(token)
+  const promise = axios.delete(`${BASE_URL}/subscriptions`, config);
+
+  return promise;
+}
+
+const api = { deletePlan, getListPlans, getPlan, login, signUp, subscription }
 
 export default api;

@@ -24,7 +24,7 @@ export default function App() {
           <Route path="/sign-up" element={<RegisterPage />} />
           <Route path="/subscriptions" element={<SubscriptionPage />} />
           <Route path="/subscriptions/:idPlan" element={<PaymentPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/home/:id" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </AuthContext.Provider>

@@ -33,7 +33,8 @@ export default function PaymentPage() {
             console.log(`Código de segurança = ${securityNumber}`)
             console.log(`Data de vencimento = ${expirationDate}`)
 
-            navigate('/home')
+            console.log(response)
+            navigate(`/home/${response.data.membership.id}`)
         })
         promise.catch(err => alert(err.response.data.message))
     }
