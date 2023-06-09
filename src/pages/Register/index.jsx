@@ -13,11 +13,6 @@ export default function RegisterPage() {
     function handleSubmit(e) {
         e.preventDefault()
 
-        console.log(`nome = ${name}`)
-        console.log(`CPF = ${cpf}`)
-        console.log(`e-mail = ${email}`)
-        console.log(`senha = ${password}`)
-
         const newUser = { name, cpf, email, password }
         const promise = api.signUp({ ...newUser })
 

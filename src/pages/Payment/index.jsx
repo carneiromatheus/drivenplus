@@ -27,13 +27,6 @@ export default function PaymentPage() {
         const promise = api.subscription({ ...newSubscription }, userDate.token)
 
         promise.then((response) => {
-            console.log(`membershipId = ${idPlan}`)
-            console.log(`Nome no cartão = ${cardName}`)
-            console.log(`Numero do cartão = ${cardNumber}`)
-            console.log(`Código de segurança = ${securityNumber}`)
-            console.log(`Data de vencimento = ${expirationDate}`)
-
-            console.log(response)
             navigate(`/home/${response.data.membership.id}`)
         })
         promise.catch(err => alert(err.response.data.message))
@@ -41,8 +34,6 @@ export default function PaymentPage() {
 
     function loadPlan(token) {
         const promise = api.getPlan(token, idPlan)
-
-        console.log(`id selecionado = ${idPlan}`)
 
         promise.then(response => {
             setPlan(response.data)

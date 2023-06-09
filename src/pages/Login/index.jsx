@@ -21,13 +21,8 @@ export default function LoginPage() {
         const promise = api.login({ ...user })
 
         promise.then(response => {
-
-            console.log(`e-mail = ${email}`)
-            console.log(`senha = ${password}`)
-            // console.log(`plano = ${response.data.membership.id}`)
-
             setAndPersistUser(response.data)
-            { response.data.membership === null ? navigate('/subscriptions') : navigate('/home') }
+            { response.data.membership === null ? navigate('/subscriptions') : navigate(`/home/${response.data.membership.id}`) }
         })
 
         promise.catch(err => alert(err.response.data.message))

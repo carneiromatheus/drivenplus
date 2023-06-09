@@ -12,9 +12,6 @@ export default function HomePage() {
     const navigate = useNavigate()
 
     const planId = useParams()
-    console.log(planId)
-
-    console.log(userDate)
 
     function deletePlan(token) {
         const promise = api.deletePlan(token)
@@ -28,14 +25,12 @@ export default function HomePage() {
 
         promise.then(response => {
             setPlan(response.data)
-            // console.log(response.data)
         })
 
-        promise.catch(err => console.log(err.response.data.message))
+        promise.catch(err => alert(err.response.data.message))
     }
 
     useEffect(() => {
-        // console.log(userDate.membership.id)
         loadPlan(userDate.token, planId.id)
     }, [])
 
